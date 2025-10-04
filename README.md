@@ -1,11 +1,9 @@
-# 📈 Stock Trading Platform
+# 📈 Stockly Trading Platform
 
 A full-stack real-time stock trading application built with ASP.NET Core 8.0 and Angular 19. Features live stock price updates, portfolio management, and automated async order processing with price cachcing.
 
-## 📱 Application Screenshots
-
-### Dashboard Overview
-![Dashboard](./photos/Ekran%20görüntüsü%202025-10-04%20185905.png)
+### Dashboard Interface
+![Dashboard](./photos/Ekran%20görüntüsü%202025-10-04%20185953.png)
 
 ## 🏗️ Architecture
 
@@ -35,6 +33,9 @@ A full-stack real-time stock trading application built with ASP.NET Core 8.0 and
 - Visual Studio 2022 or VS Code
 
 The application will be available at `https://localhost:5117`
+
+### Portfolio Interface
+![Portfolio](./photos/Ekran%20görüntüsü%202025-10-04%20190102.png)
 
 ## 📁 Project Structure
 
@@ -99,13 +100,10 @@ dotnetproject/
 └── build-angular.bat                  # Build Script
 ```
 
-### Login Interface
-![Login](./photos/Ekran%20görüntüsü%202025-10-04%20185953.png)
-
+### Login Page Overview
+![Login](./photos/Ekran%20görüntüsü%202025-10-04%20185905.png)
 
 ### 🔐 Authentication Flow
-
-![Authentication Flow](./photos/Ekran%20görüntüsü%202025-10-04%20190102.png)
 
 1. **Registration**
    - User submits username, email, and password
@@ -123,6 +121,9 @@ dotnetproject/
    - `AuthInterceptor` automatically attaches JWT token to all HTTP requests
    - Backend validates token on protected endpoints
    - `AuthGuard` protects frontend routes from unauthorized access
+
+### Transaction History
+![Transaction](./photos/Ekran%20görüntüsü%202025-10-04%20190116.png)
 
 ### 📊 Stock Price System
 
@@ -181,7 +182,7 @@ public class PriceCacheService
 - **Real-time**: Prices updated every 5 seconds by background service
 - **Scalability**: Handles thousands of concurrent requests efficiently
 
-### Trading Interface
+### Dashboard with Indicators
 ![Trading](./photos/Ekran%20görüntüsü%202025-10-04%20190013.png)
 
 ### 💰 Trading System
@@ -491,10 +492,6 @@ protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     }
 }
 ```
-
-### 💼 Portfolio Management
-
-![Portfolio Management](./photos/Ekran%20görüntüsü%202025-10-04%20190116.png)
 
 #### Holdings Calculation
 - **Quantity Owned**: Sum of all buy orders - sum of all sell orders (per stock)
