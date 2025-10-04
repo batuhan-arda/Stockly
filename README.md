@@ -2,6 +2,11 @@
 
 A full-stack real-time stock trading application built with ASP.NET Core 8.0 and Angular 19. Features live stock price updates, portfolio management, and automated async order processing with price cachcing.
 
+## 📱 Application Screenshots
+
+### Dashboard Overview
+![Dashboard](./photos/Ekran%20görüntüsü%202025-10-04%20185905.png)
+
 ## 🏗️ Architecture
 
 ### Backend Stack
@@ -94,7 +99,13 @@ dotnetproject/
 └── build-angular.bat                  # Build Script
 ```
 
+### Login Interface
+![Login](./photos/Ekran%20görüntüsü%202025-10-04%20185953.png)
+
+
 ### 🔐 Authentication Flow
+
+![Authentication Flow](./photos/Ekran%20görüntüsü%202025-10-04%20190102.png)
 
 1. **Registration**
    - User submits username, email, and password
@@ -169,6 +180,9 @@ public class PriceCacheService
 - **Consistency**: All services use the same price data
 - **Real-time**: Prices updated every 5 seconds by background service
 - **Scalability**: Handles thousands of concurrent requests efficiently
+
+### Trading Interface
+![Trading](./photos/Ekran%20görüntüsü%202025-10-04%20190013.png)
 
 ### 💰 Trading System
 
@@ -480,6 +494,8 @@ protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 
 ### 💼 Portfolio Management
 
+![Portfolio Management](./photos/Ekran%20görüntüsü%202025-10-04%20190116.png)
+
 #### Holdings Calculation
 - **Quantity Owned**: Sum of all buy orders - sum of all sell orders (per stock)
 - **Average Buy Price**: Weighted average of purchase prices
@@ -497,6 +513,8 @@ bestPerformer = holdings.sort((a, b) => b.gainPercent - a.gainPercent)[0];
 ```
 
 ### 💳 Wallet System
+
+![Wallet System](./photos/Ekran%20görüntüsü%202025-10-04%20190139.png)
 
 #### Balance Management
 - **Initial Balance**: $10,000 upon registration
